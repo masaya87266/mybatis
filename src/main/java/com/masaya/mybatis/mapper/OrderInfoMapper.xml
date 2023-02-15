@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-1-mapper.dtd">
+<mapper namespace="com.masaya.mybatis.mapper.OrderInfoMapper">
+
+    <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultType="com.masaya.mybatis.model.OrderInfo">
+        select *
+        from o_order_info
+        where id = #{id, jdbcType=INTEGER}
+    </select>
+</mapper>

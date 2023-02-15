@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        SYSTEM
+        "mybatis/src/main/java/com/masaya/mybatis/mybatis/parsing/mybatis-1-config.dtd">
+<configuration>
+
+    <environment default="dev">
+        <dataSource id="dev">
+            <property name="driver" value="com.mysql.jdbc.Driver"/>
+            <property name="url"
+                      value="jdbc:mysql://localhost:3306/mybatis?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useSSL=false"/>
+            <property name="username" value="root"/>
+            <property name="password" value="zheng123"/>
+        </dataSource>
+
+        <dataSource id="test">
+            <property name="driver" value="com.mysql.jdbc.Driver"/>
+            <property name="url"
+                      value="jdbc:mysql://localhost:3306/mybatis?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf8&rewriteBatchedStatements=true&useSSL=false"/>
+            <property name="username" value="root"/>
+            <property name="password" value="zheng123"/>
+        </dataSource>
+    </environment>
+
+    <mappers>
+        <mapper resource="com/masaya/mybatis/mapper/UserInfoMapper.xml"/>
+        <mapper resource="com/masaya/mybatis/mapper/OrderInfoMapper.xml"/>
+    </mappers>
+</configuration>
