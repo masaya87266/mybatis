@@ -1,5 +1,6 @@
 package com.masaya.mybatis.mybatis.session;
 
+import com.masaya.mybatis.mybatis.mapping.MyConfiguration;
 import com.masaya.mybatis.mybatis.parsing.MyXMLConfigBuilder;
 import com.masaya.mybatis.mybatis.parsing.MyXPathParser;
 
@@ -11,6 +12,8 @@ public class MySqlSessionFactoryBuilder {
 
     public MySqlSessionFactory build(InputStream inputStream) {
         MyXMLConfigBuilder myXMLConfigBuilder = new MyXMLConfigBuilder(inputStream);
-        myXMLConfigBuilder.parse();
+        MyConfiguration myConfiguration = myXMLConfigBuilder.parse();
+        
+        return new MySqlSessionFactory(myConfiguration);
     }
 }
