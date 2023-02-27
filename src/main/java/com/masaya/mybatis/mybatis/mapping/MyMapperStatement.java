@@ -6,7 +6,7 @@ public class MyMapperStatement {
 
     private String sqlId;
 
-    private String parameter;
+    private String parameterType;
 
     private String resultType;
 
@@ -28,12 +28,12 @@ public class MyMapperStatement {
         this.sqlId = sqlId;
     }
 
-    public String getParameter() {
-        return parameter;
+    public String getParameterType() {
+        return parameterType;
     }
 
-    public void setParameter(String parameter) {
-        this.parameter = parameter;
+    public void setParameterType(String parameterType) {
+        this.parameterType = parameterType;
     }
 
     public String getResultType() {
