@@ -52,7 +52,7 @@ public class MyXMLConfigBuilder {
                 String namespace = mapperXmlNode.getAttributes().getNamedItem("namespace").getNodeValue();
                 NodeList mapperXmlNodeList = mapperXmlNode.getChildNodes();
                 for (int j = 0; j < mapperXmlNodeList.getLength(); j++) {
-                    Node mapperSQLNode = mapperXmlNodeList.item(i);
+                    Node mapperSQLNode = mapperXmlNodeList.item(j);
                     if (mapperSQLNode.getNodeType() == Node.ELEMENT_NODE) {
                         String id = mapperSQLNode.getAttributes().getNamedItem("id").getNodeValue();
                         String parameterType = mapperSQLNode.getAttributes().getNamedItem("parameterType").getNodeValue();
